@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizardly</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <ul>
+                <li><a href="{% url 'home' %}" class="left brand-logo">&nbsp;&nbsp;Wizardly</a></li>
+            </ul>
+            <ul class="right">
+                <li><a href="{% url 'home' %}">home</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    {% block content %}
+    {% endblock %}
+
+
+    <footer class="page-footer">
+        <div class="right">All Rights Reserved, &copy; 2020 Cat Wizardly</div>
+    </footer>
+</body>
+
+</html>
